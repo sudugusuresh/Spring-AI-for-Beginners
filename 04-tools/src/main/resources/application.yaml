@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: spring-ai-tools
+  main:
+    banner-mode: off
+  web:
+    error:
+      include-message: always
+  # Microsoft Foundry configuration via spring-ai-starter-model-openai
+  ai:
+    openai:
+      base-url: ${AZURE_OPENAI_ENDPOINT}
+      api-key: ${AZURE_OPENAI_API_KEY}
+      microsoft-deployment-name: ${AZURE_OPENAI_FAST_DEPLOYMENT}
+      chat:
+        model: ${AZURE_OPENAI_FAST_DEPLOYMENT}
+
+server:
+  port: 8084
+
+# Spring Boot Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    "[com.example.springai]": DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"

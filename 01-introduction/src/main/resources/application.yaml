@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-ai-getting-started
+  # Microsoft Foundry configuration via spring-ai-starter-model-openai
+  # These environment variables are set by 'azd up' deployment
+  ai:
+    openai:
+      base-url: ${AZURE_OPENAI_ENDPOINT}
+      api-key: ${AZURE_OPENAI_API_KEY}
+      microsoft-deployment-name: ${AZURE_OPENAI_FAST_DEPLOYMENT}
+      chat:
+        model: ${AZURE_OPENAI_FAST_DEPLOYMENT}
+
+# Spring Boot Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+# Logging configuration
+logging:
+  level:
+    "[com.example.springai]": INFO
+    "[org.springframework.ai]": DEBUG
+
+# Values are read from environment variables (see .env.example)

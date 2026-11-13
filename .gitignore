@@ -1,0 +1,114 @@
+# Maven
+target/
+**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE - IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.recommenders
+.externalToolBuilders/
+*.launch
+
+# IDE - VS Code
+*.code-workspace
+
+# IDE - NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.log
+*.log.err
+
+# Azure
+.azure/
+**/.azure/*
+!**/.azure/{environment-name}/.env.example
+azd-*.json
+
+# Bicep compiled outputs (auto-generated from .bicep files)
+**/infra/**/*.json
+!**/infra/**/*.bicepparam
+
+# Node (for any frontend tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+.build/
+
+# Application specific
+*.class
+hs_err_pid*
+replay_pid*
+CONSOLIDATION_ANALYSIS.md
+DOTENV_MIGRATION_PLAN.md
+
+# Playwright output folder
+.playwright-mcp/
+
+# MCP Servers (users add locally from https://github.com/modelcontextprotocol/servers)
+/servers/
+
+IMAGE_GENERATION_GUIDE.md
+githubcopilot.md
+loadusers.sh
+script.txt
+PROJECT_RECREATION_INSTRUCTIONS.md
+.vscode/mcp.json
+generate-agent-images.py
+generate-fix-images.py
+generate-springai-fits-image.py
+generate-prompt-eng-image.py
+04-tools/images/tool-calling-sequence.puml
+04-tools/images/spring-boot-sequence.puml
+regen-tool-seq.py
+regen-boot-seq.py
+render-puml.py
+.env copy
+# Anchored: an unanchored "tools/" also matched 04-tools' com/example/springai/tools package.
+/tools/
+.devcontainer/devcontainer-lock.json
+
